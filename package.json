@@ -6,11 +6,13 @@
   "author": "Yuri Yakovlev <hi@mynameisyuri.com> (https://yuri.works/)",
   "homepage": "https://github.com/yakovlevyuri/telegram-bot-boilerplate",
   "dependencies": {
+    "axios": "^1.12.2",
     "dotenv-cli": "^4.0.0",
     "express": "^4.17.1",
     "telegraf": "^4.4.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.9.36",
     "@types/debug": "^4.1.6",
     "@types/node": "^16.0.0",
     "@zeit/ncc": "^0.22.3",
