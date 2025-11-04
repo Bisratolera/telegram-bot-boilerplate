@@ -7,9 +7,9 @@ import { greeting } from './text';
 
 const debug = createDebug('bot');
 
-const ENVIRONMENT = process.env.NODE_ENV || '';
-const BOT_TOKEN = process.env.BOT_TOKEN || '';
-const USERNAME = process.env.USERNAME || '';
+const ENVIRONMENT = process.env.NODE_ENV || '7470027559:AAHEnVcCg1k9gFN5J3mvEQHm7ibTsbWXS2Q';
+const BOT_TOKEN = process.env.BOT_TOKEN || '7470027559:AAHEnVcCg1k9gFN5J3mvEQHm7ibTsbWXS2Q';
+const USERNAME = process.env.USERNAME || '7470027559:AAHEnVcCg1k9gFN5J3mvEQHm7ibTsbWXS2Q';
 const PORT = (process.env.PORT && parseInt(process.env.PORT, 10)) || 3000;
 const WEBHOOK_URL = process.env.WEBHOOK_URL || '';
 
