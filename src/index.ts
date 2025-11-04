@@ -1,7 +1,7 @@
 import { Telegraf } from 'telegraf';
 import createDebug from 'debug';
+import * as express from 'express';
 import { InlineQueryResult } from 'typegram';
-import express from 'express';
 import { about, music, searchArtist, searchRelease, searchLabel } from './commands';
 import { greeting } from './text';
 
@@ -76,7 +76,9 @@ const production = async () => {
   }
   const app = express();
   app.use(express.json());
-  app.use(await bot.createWebhook({ domain: WEBHOOK_URL }));
+  const secretPath = `/telegraf/${bot.secretPathComponent()}`;
+  await bot.telegram.setWebhook(`${WEBHOOK_URL}${secretPath}`);
+  app.use(bot.webhookCallback(secretPath));
 
   app.listen(PORT, () => {
     debug(`Server listening on port ${PORT}`);
